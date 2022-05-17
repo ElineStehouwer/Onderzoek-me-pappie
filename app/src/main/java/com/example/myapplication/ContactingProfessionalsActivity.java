@@ -13,6 +13,7 @@ public class ContactingProfessionalsActivity extends AppCompatActivity {
     RecyclerView recyclerView;
 
     String[] s1, s2, s3, s4;
+
     int[] images = {R.drawable.vivi_luicks,R.drawable.annelena_de_vletter, R.drawable.alexandra_dullaart,
             R.drawable.robert_van_den_bosch, R.drawable.niels_nederveld, R.drawable.irene_kurpershoek,
             R.drawable.amrah_van_til, R.drawable.loes_dols};

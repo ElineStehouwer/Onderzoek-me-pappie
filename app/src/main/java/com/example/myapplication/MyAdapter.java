@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +41,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         holder.text2.setText(data2[position]);
         holder.text3.setText(data3[position]);
         holder.text4.setText(data4[position]);
+        holder.text4.setOnClickListener(new View.OnClickListener() {@Override
+            public void onClick (View v) {
+            String website = data4[holder.getAdapterPosition()];
+            Intent browserIntent = new Intent (Intent.ACTION_VIEW, Uri.parse(website));
+            context.startActivity(browserIntent);
+        }
+        });
         holder.myImage.setImageResource(images[position]);
     }
 
