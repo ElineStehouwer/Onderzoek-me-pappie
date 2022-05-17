@@ -1,3 +1,49 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="link"><a href="http://www.psychologiepraktijk-vivir.nl">Website</a></string>
+
+    <string-array name="names">
+        <item>Vivi Luijckx</item>
+        <item>Anne-Lena de Vletter</item>
+        <item>Alexandra Dullaart</item>
+        <item>Robert van den Bosch</item>
+        <item>Niels Nederveld</item>
+        <item>Irene Kurpershoek</item>
+        <item>Amrah van Til</item>
+        <item>Loes Dols</item>
+    </string-array>
+
+    <string-array name="location">
+        <item>Nijmegen</item>
+        <item>Arnhem</item>
+        <item>Amsterdam</item>
+        <item>Rotterdam</item>
+        <item>Utrecht</item>
+        <item>Leiden</item>
+        <item>Groningen</item>
+        <item>Maastricht</item>
+    </string-array>
+
+    <string-array name="number">
+        <item>06-50244759</item>
+        <item>088-6463348</item>
+        <item>085-4014720</item>
+        <item>06-14400109</item>
+        <item>06-27053020</item>
+        <item>06-10723426</item>
+        <item>06-44362723</item>
+        <item>06-24943248</item>
+    </string-array>
+
+    <string-array name="links">
+        <item>http://www.psychologiepraktijk-vivir.nl</item>
+        <item>https://www.mindfit.nl/locatie/locatie-arnhem</item>
+        <item>https://www.psyned.nl/psycholoog/noord-holland/amsterdam/alexandra-dullaart/</item>
+        <item>https://praktijkvandenbosch.nl/</item>
+        <item>https://nielsnederveld.nl/</item>
+        <item>https://www.psycholoogleiden-kurpershoek.nl/</item>
+        <item>https://www.inverbinding.nu/nl</item>
+        <item>https://www.psychologiemaastricht.nl/</item>
+        <item>link</item>
+    </string-array>
 </resources>
