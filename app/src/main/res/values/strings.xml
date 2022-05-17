@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="link"><a href="http://www.psychologiepraktijk-vivir.nl">Website</a></string>
+    <string name="Medi">Meditation</string>
+    <string name="meditation1">1-Minute Session</string>
+    <string name="meditation2">5-Minute Session</string>
+    <string name="meditation3">10-Minute Session</string>
+    <string name="MeditationTip">Meditation Tips</string>
 
     <string-array name="names">
         <item>Vivi Luijckx</item>
