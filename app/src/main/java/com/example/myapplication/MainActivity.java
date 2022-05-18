@@ -23,6 +23,5 @@ public class MainActivity extends AppCompatActivity {
     public void openStressNDepressedMenu (View v) {
         Intent i = new Intent(this, StressNDepressedMenu.class);
         startActivity(i);
-        System.out.println("Hello");
     }
 }
