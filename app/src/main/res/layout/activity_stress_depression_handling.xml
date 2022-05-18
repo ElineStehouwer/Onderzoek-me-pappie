@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".StressDepressionHandling">
 
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:onClick="openBreathing"
+        android:text="Breathing Exercise"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="195dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
