@@ -14,7 +14,7 @@ public class StressDepressionHandling extends AppCompatActivity {
         setContentView(R.layout.activity_stress_depression_handling);
     }
     public void openBreathing(View v) {
-        Intent i = new Intent(this, StressDepressionHandling.class);
+        Intent i = new Intent(this, BreathingExercise.class);
         startActivity(i);
         System.out.println("Hello");
     }
