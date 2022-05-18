@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".StressDepressionHandling"
+            android:name=".BreathingExplanation"
+            android:exported="false" />
+        <activity
+            android:name=".BreathingExercise"
+            android:exported="false" />
+        <activity
+            android:name=".BreathingMenu"
             android:exported="false" />
         <activity
             android:name=".ContactingProfessionalsActivity"

@@ -4,18 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
-public class StressDepressionHandling extends AppCompatActivity {
+public class BreathingMenu extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stress_depression_handling);
+        setContentView(R.layout.activity_breathing_exercise);
     }
-    public void openBreathing(View v) {
+
+    public void openBreatingExercise() {
         Intent i = new Intent(this, BreathingExercise.class);
         startActivity(i);
-        System.out.println("Hello");
+    }
+
+    public void openbreathingExplanation() {
+        Intent i = new Intent(this, BreathingExplanation.class);
+        startActivity(i);
     }
 }
