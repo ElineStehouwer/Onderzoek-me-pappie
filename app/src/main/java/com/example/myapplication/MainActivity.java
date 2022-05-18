@@ -4,10 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Hello");
     }
 
-    public void openBreathing (View v) {
-        Intent i = new Intent(this, BreathingExercice.class);
+    public void openStressDepression (View v) {
+        Intent i = new Intent(this, StressDepressionHandling.class);
         startActivity(i);
         System.out.println("Hello");
     }
