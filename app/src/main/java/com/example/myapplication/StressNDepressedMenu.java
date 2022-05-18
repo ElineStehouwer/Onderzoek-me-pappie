@@ -19,4 +19,9 @@ public class StressNDepressedMenu extends AppCompatActivity {
         Intent i = new Intent(this, MeditationOptions.class);
         startActivity(i);
     }
+
+    public void openBreathing (View V) {
+        Intent i = new Intent ( this, BreathingExercise.class);
+        startActivity(i);
+    }
 }

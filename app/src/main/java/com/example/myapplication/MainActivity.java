@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Hello");
     }
 
-    public void openStressDepression (View v) {
-        Intent i = new Intent(this, StressDepressionHandling.class);
+    public void openStressNDepressedMenu (View v) {
+        Intent i = new Intent(this, StressNDepressedMenu.class);
         startActivity(i);
         System.out.println("Hello");
     }
