@@ -10,11 +10,17 @@ public class BreathingExercise extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stress_depression_handling);
+        setContentView(R.layout.activity_breathing_exercise);
     }
 
-    public class openStartBreathing(View v) {
+    public void openStartBreathing(View v) {
         Intent i = new Intent(this, StartBreathing.class);
+        startActivity(i);
+        System.out.println("Hello");
+    }
+
+    public void openBreathingExplanation(View v ){
+        Intent i = new Intent(this, BreathingExplanation.class);
         startActivity(i);
         System.out.println("Hello");
     }
