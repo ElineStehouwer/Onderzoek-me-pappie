@@ -24,4 +24,19 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, StressNDepressedMenu.class);
         startActivity(i);
     }
+
+    public void openEmotionTracker (View v) {
+        Intent i = new Intent (this, EmotionTracker.class);
+        startActivity(i);
+    }
+
+    public void openGoalTracker (View v) {
+        Intent i = new Intent (this, GoalTracker.class);
+        startActivity(i);
+    }
+
+    public void openChatting (View v) {
+        Intent i = new Intent (this, Chatting.class);
+        startActivity(i);
+    }
 }

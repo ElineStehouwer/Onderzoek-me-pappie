@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".Chatting"
+            android:exported="false" />
+        <activity
+            android:name=".GoalTracker"
+            android:exported="false" />
+        <activity
+            android:name=".EmotionTracker"
+            android:exported="false" />
+        <activity
             android:name=".BreathingExplanation"
             android:exported="false" />
         <activity
