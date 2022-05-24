@@ -53,7 +53,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:onClick="openStressNDepressedMenu"
+        android:onClick="openSNDmenu"
         android:text="Stress and Depression Handling"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

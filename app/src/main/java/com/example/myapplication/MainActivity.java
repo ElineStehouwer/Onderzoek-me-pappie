@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import java.sql.SQLOutput;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("Hello");
     }
 
-    public void openStressNDepressedMenu (View v) {
-        Intent i = new Intent(this, StressNDepressedMenu.class);
+    public void openSNDmenu (View v) {
+        Intent i = new Intent(this, SNDmenu.class);
         startActivity(i);
     }
 }

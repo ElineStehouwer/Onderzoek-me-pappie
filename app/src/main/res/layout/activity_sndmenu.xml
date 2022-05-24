@@ -4,31 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StressNDepressedMenu">
+    tools:context=".SNDmenu">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="134dp"
-        android:layout_marginEnd="141dp"
-        android:onClick="openMeditation"
-        android:text="@string/Medi"
+        android:onClick="openBreathing"
+        android:text="Breathing"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button10"
-        android:layout_width="230dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginEnd="141dp"
-        android:onClick="openBreathingMenu"
-        android:text="Breathing"
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openMeditation"
+        android:text="Meditation"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/button9"
+        app:layout_constraintVertical_bias="0.174" />
 </androidx.constraintlayout.widget.ConstraintLayout>

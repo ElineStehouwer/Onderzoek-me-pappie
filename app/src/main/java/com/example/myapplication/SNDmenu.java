@@ -6,22 +6,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class StressNDepressedMenu extends AppCompatActivity {
+public class SNDmenu extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stress_ndepressed_menu);
+        setContentView(R.layout.activity_sndmenu);
     }
-
 
     public void openMeditation (View v) {
         Intent i = new Intent(this, MeditationOptions.class);
         startActivity(i);
     }
 
-    public void openBreathingMenu (View v) {
-        Intent i = new Intent ( this, BreathingMenu.class);
+    public void openBreathing (View v) {
+        Intent i = new Intent ( this, BreathingOptions.class);
         startActivity(i);
     }
 }
