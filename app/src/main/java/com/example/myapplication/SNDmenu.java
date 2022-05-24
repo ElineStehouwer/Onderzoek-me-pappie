@@ -15,7 +15,7 @@ public class SNDmenu extends AppCompatActivity {
     }
 
     public void openMeditation (View v) {
-        Intent i = new Intent(this, MeditationOptions.class);
+        Intent i = new Intent(this, MeditationOptionsActivity.class);
         startActivity(i);
     }
 
