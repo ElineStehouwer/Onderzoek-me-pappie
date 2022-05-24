@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     public void openContacting (View v) {
         Intent i = new Intent(this, ContactingProfessionalsActivity.class);
         startActivity(i);
-        System.out.println("Hello");
     }
 
     public void openStressNDepressedMenu (View v) {

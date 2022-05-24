@@ -5,11 +5,20 @@
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_contacting_professionals.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.14074074074074075" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_meditation_options.xml" value="0.228125" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/MyApplication/app/src/main/res/layout/activity_stress_ndepressed_menu.xml" value="0.228125" />
-        <entry key="..\:/Users/irisr/AndroidStudioProjects/Onderzoek-me-pappie/app/src/main/res/layout/activity_chatting.xml" value="0.2359375" />
-        <entry key="..\:/Users/irisr/AndroidStudioProjects/Onderzoek-me-pappie/app/src/main/res/layout/activity_goal_tracker.xml" value="0.2359375" />
-        <entry key="..\:/Users/irisr/AndroidStudioProjects/Onderzoek-me-pappie/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="app/src/main/res/layout/activity_breathing_exercice.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/activity_breathing_exercise.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/activity_breathing_explanation.xml" value="0.2640625" />
+        <entry key="app/src/main/res/layout/activity_contacting_professionals.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/activity_meditation_options.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/activity_start_breathing.xml" value="0.35208333333333336" />
+        <entry key="app/src/main/res/layout/activity_stress_depression_handling.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/activity_stress_ndepressed_menu.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/breathing_exercise.xml" value="0.28888888888888886" />
+        <entry key="app/src/main/res/layout/content_breathing_exercise.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/start_breathing.xml" value="0.2640625" />
       </map>
     </option>
   </component>

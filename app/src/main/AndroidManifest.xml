@@ -19,6 +19,9 @@
             android:name=".EmotionTracker"
             android:exported="false" />
         <activity
+            android:name=".oneMinSess"
+            android:exported="false" />
+        <activity
             android:name=".BreathingExplanation"
             android:exported="false" />
         <activity
