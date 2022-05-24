@@ -19,11 +19,25 @@ public class MainActivity extends AppCompatActivity {
     public void openContacting (View v) {
         Intent i = new Intent(this, ContactingProfessionalsActivity.class);
         startActivity(i);
-        System.out.println("Hello");
     }
 
     public void openSNDmenu (View v) {
         Intent i = new Intent(this, SNDmenu.class);
+        startActivity(i);
+    }
+
+    public void openEmotionTracker (View v) {
+        Intent i = new Intent (this, EmotionTracker.class);
+        startActivity(i);
+    }
+
+    public void openGoalTracker (View v) {
+        Intent i = new Intent (this, GoalTracker.class);
+        startActivity(i);
+    }
+
+    public void openChatting (View v) {
+        Intent i = new Intent (this, Chatting.class);
         startActivity(i);
     }
 }

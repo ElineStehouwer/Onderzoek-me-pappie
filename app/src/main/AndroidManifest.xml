@@ -10,16 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".BreathingOptions"
-            android:exported="false" />
-        <activity
-            android:name=".SNDmenu"
-            android:exported="false" />
-        <activity
             android:name=".BreathingExplanation"
             android:exported="false" />
         <activity
             android:name=".BreathingExercise"
+            android:exported="false" />
+        <activity
+            android:name=".BreathingMenu"
             android:exported="false" />
         <activity
             android:name=".ContactingProfessionalsActivity"
