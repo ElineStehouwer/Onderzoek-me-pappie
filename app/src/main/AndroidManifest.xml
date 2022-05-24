@@ -24,17 +24,21 @@
             android:label="Contacting Professionals" />
         <activity
             android:name=".SNDmenu"
-            android:exported="false"
-            />
-        <activity android:name=".Chatting"
+            android:exported="false" />
+        <activity
+            android:name=".Chatting"
             android:exported="false"/>
-        <activity android:name=".EmotionTracker"
+        <activity
+            android:name=".EmotionTracker"
             android:exported="false"/>
-        <activity android:name=".GoalTracker"
+        <activity
+            android:name=".GoalTracker"
             android:exported="false"/>
-        <activity android:name=".MeditationOptionsActivity"
+        <activity
+            android:name=".MeditationOptionsActivity"
             android:exported="false"/>
-        <activity android:name=".oneMinSess"
+        <activity
+            android:name=".oneMinSess"
             android:exported="false"/>
         <activity
             android:name=".MainActivity"
