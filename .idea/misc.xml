@@ -8,11 +8,12 @@
         <entry key="app/src/main/res/layout/activity_breathing_exercice.xml" value="0.353125" />
         <entry key="app/src/main/res/layout/activity_breathing_exercise.xml" value="0.353125" />
         <entry key="app/src/main/res/layout/activity_breathing_explanation.xml" value="0.2640625" />
-        <entry key="app/src/main/res/layout/activity_breathing_options.xml" value="0.1796875" />
+        <entry key="app/src/main/res/layout/activity_breathing_options.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_contacting_professionals.xml" value="0.353125" />
+        <entry key="app/src/main/res/layout/activity_goal_tracker.xml" value="0.2708333333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.353125" />
         <entry key="app/src/main/res/layout/activity_meditation_options.xml" value="0.353125" />
-        <entry key="app/src/main/res/layout/activity_sndmenu.xml" value="0.1796875" />
+        <entry key="app/src/main/res/layout/activity_sndmenu.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_start_breathing.xml" value="0.35208333333333336" />
         <entry key="app/src/main/res/layout/activity_stress_depression_handling.xml" value="0.353125" />
         <entry key="app/src/main/res/layout/activity_stress_ndepressed_menu.xml" value="0.353125" />

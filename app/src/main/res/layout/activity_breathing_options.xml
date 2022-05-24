@@ -6,4 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".BreathingOptions">
 
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:onClick="openBreathingExercise"
+        android:text="Start Exercise"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:onClick="openBreathingExplanation"
+        android:text="Explanation And Tips"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button9"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
