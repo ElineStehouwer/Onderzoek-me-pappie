@@ -16,12 +16,26 @@
             android:name=".BreathingExercise"
             android:exported="false" />
         <activity
-            android:name=".BreathingMenu"
+            android:name=".BreathingOptions"
             android:exported="false" />
         <activity
             android:name=".ContactingProfessionalsActivity"
             android:exported="false"
             android:label="Contacting Professionals" />
+        <activity
+            android:name=".SNDmenu"
+            android:exported="false"
+            />
+        <activity android:name=".Chatting"
+            android:exported="false"/>
+        <activity android:name=".EmotionTracker"
+            android:exported="false"/>
+        <activity android:name=".GoalTracker"
+            android:exported="false"/>
+        <activity android:name=".MeditationOptionsActivity"
+            android:exported="false"/>
+        <activity android:name=".oneMinSess"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
