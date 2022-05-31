@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/play"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".oneMinSess">
@@ -17,4 +18,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/puppy" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="248dp"
+        android:onClick="onStart"
+        android:text="Play"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/pauze"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onPause"
+        android:text="pauze"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
 </androidx.constraintlayout.widget.ConstraintLayout>
