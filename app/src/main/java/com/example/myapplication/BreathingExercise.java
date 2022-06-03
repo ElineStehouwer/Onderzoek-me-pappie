@@ -20,10 +20,13 @@ public class BreathingExercise extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breathing_exercise);
         setTitle("Breathing");
+
     }
 
     ProgressBar pb;
-    int counter;
+    int counter = 0;
+    int state = 0;
+    int loops = 0;
     Timer timer = new Timer();
 
     public int startTimer(View v) {
@@ -34,7 +37,32 @@ public class BreathingExercise extends AppCompatActivity {
                 counter++;
                 pb.setProgress(counter);
 
-                if (counter == pb.getMax()) {
+                if (pb.getProgress() == pb.getMax()) {
+                    counter = 0;
+                    state++;
+                    TextView text = findViewById(R.id.textView11);
+                    switch (state) {
+                        case 0: // Breathe In (5s)
+                            pb.setMax(90);
+                            text.setText("Breathe In");
+                            break;
+                        case 1: // Hold1 (6s)
+                            pb.setMax(100);
+                            text.setText("Hold Your Breath");
+                            break;
+                        case 2: // Breathe Out (7s)
+                            pb.setMax(110);
+                            text.setText("Breathe Out");
+                            break;
+                        case 3: // Hold2 (5s)
+                            pb.setMax(80);
+                            text.setText("Hold Your Breath");
+                            state = -1;
+                            loops++;
+                            break;
+                    }
+                }
+                if (loops == 3) {
                     timer.cancel();
                 }
             }
@@ -44,23 +72,32 @@ public class BreathingExercise extends AppCompatActivity {
     }
 
 
-    public void changeText(int state) {
-        TextView text = findViewById(R.id.textView11);
-        switch (state) {
-            case 0: // Breathe In
-                text.setText("Breathe In");
-                break;
-            case 1: // Hold1
-                text.setText("Hold Your Breath");
-                break;
-            case 2: // Breathe Out
-                text.setText("Breathe Out");
-                break;
-            case 3: // Hold2
-                text.setText("Hold Your Breath");
-                break;
-        }
-    }
+
+
+//    public void changeText(int state) {
+//        TextView text = findViewById(R.id.textView11);
+//        switch (state) {
+//            case 0: // Breathe In (5s)
+//                pb.setMax(90);
+//                text.setText("Breathe In");
+//                break;
+//            case 1: // Hold1 (6s)
+//                pb.setMax(100);
+//                text.setText("Hold Your Breath");
+//                break;
+//            case 2: // Breathe Out (7s)
+//                pb.setMax(110);
+//                text.setText("Breathe Out");
+//                break;
+//            case 3: // Hold2 (5s)
+//                pb.setMax(80);
+//                text.setText("Hold Your Breath");
+//                state = -1;
+//                loops++;
+//                break;
+//        }
+//        return;
+//    }
 }
 
 
