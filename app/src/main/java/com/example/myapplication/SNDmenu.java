@@ -12,6 +12,7 @@ public class SNDmenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sndmenu);
+        setTitle("Stress & Depression Handling");
     }
 
     public void openMeditation (View v) {

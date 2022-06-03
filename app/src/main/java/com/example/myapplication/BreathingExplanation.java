@@ -10,5 +10,6 @@ public class BreathingExplanation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breathing_explanation);
+        setTitle("Breathing");
     }
 }

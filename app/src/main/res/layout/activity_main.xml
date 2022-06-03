@@ -44,7 +44,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="188dp"
         android:onClick="openEmotionTracker"
-        android:text="Emotion tracking"
+        android:text="Emotion tracker"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/button"
