@@ -6,6 +6,7 @@
     <string name="meditation2">5-Minute Session</string>
     <string name="meditation3">10-Minute Session</string>
     <string name="MeditationTip">Meditation Tips</string>
+    <string name="explanation">Here are some tips that help with stress: </string>
 
     <string-array name="names">
         <item>Vivi Luijckx</item>

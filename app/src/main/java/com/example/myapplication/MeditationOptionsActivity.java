@@ -19,4 +19,14 @@ public class MeditationOptionsActivity extends AppCompatActivity {
         Intent i = new Intent(this, oneMinSess.class);
         startActivity(i);
     }
+
+    public void openTwoMinSess (View v) {
+        Intent i = new Intent (this, TwoMinSess.class);
+        startActivity(i);
+    }
+
+    public void openTenMinSess (View v) {
+        Intent i = new Intent (this, TenMinSess.class);
+        startActivity(i);
+    }
 }
