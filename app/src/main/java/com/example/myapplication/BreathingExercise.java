@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class BreathingExercise extends AppCompatActivity {
@@ -20,17 +22,27 @@ public class BreathingExercise extends AppCompatActivity {
         setTitle("Breathing");
     }
 
+    ProgressBar pb;
+    int counter;
+    Timer timer = new Timer();
 
-    public int startBreathingTimer(View v) throws InterruptedException {
-        int state = 0;
-        for (int i = 0; i < 600000000; i++) {
-            changeText(state);
-            Thread.sleep(6000);
-            state++;
-        }
+    public int startTimer(View v) {
+        pb = (ProgressBar) findViewById(R.id.ProgressBar);
+        TimerTask timertask = new TimerTask() {
+            @Override
+            public void run() {
+                counter++;
+                pb.setProgress(counter);
 
+                if (counter == pb.getMax()) {
+                    timer.cancel();
+                }
+            }
+        };
+        timer.schedule(timertask, 0, 100);
         return 0;
     }
+
 
     public void changeText(int state) {
         TextView text = findViewById(R.id.textView11);
