@@ -20,6 +20,7 @@ public class BreathingExercise extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breathing_exercise);
         setTitle("Breathing");
+        startTimer();
 
     }
 
@@ -29,75 +30,56 @@ public class BreathingExercise extends AppCompatActivity {
     int loops = 0;
     Timer timer = new Timer();
 
-    public int startTimer(View v) {
+    public int startTimer() {
         pb = (ProgressBar) findViewById(R.id.ProgressBar);
+        pb.setMax(100);
+        TextView text = (TextView) findViewById(R.id.textView11);
         TimerTask timertask = new TimerTask() {
             @Override
             public void run() {
                 counter++;
                 pb.setProgress(counter);
-
-                if (pb.getProgress() == pb.getMax()) {
+                if (counter == 100) {
                     counter = 0;
+                    changeText(state);
                     state++;
-                    TextView text = findViewById(R.id.textView11);
-                    switch (state) {
-                        case 0: // Breathe In (5s)
-                            pb.setMax(90);
-                            text.setText("Breathe In");
-                            break;
-                        case 1: // Hold1 (6s)
-                            pb.setMax(100);
-                            text.setText("Hold Your Breath");
-                            break;
-                        case 2: // Breathe Out (7s)
-                            pb.setMax(110);
-                            text.setText("Breathe Out");
-                            break;
-                        case 3: // Hold2 (5s)
-                            pb.setMax(80);
-                            text.setText("Hold Your Breath");
-                            state = -1;
-                            loops++;
-                            break;
-                    }
-                }
-                if (loops == 3) {
-                    timer.cancel();
                 }
             }
         };
-        timer.schedule(timertask, 0, 100);
+        timer.schedule(timertask, 1000, 100);
         return 0;
     }
 
 
 
 
-//    public void changeText(int state) {
-//        TextView text = findViewById(R.id.textView11);
-//        switch (state) {
-//            case 0: // Breathe In (5s)
+    public void changeText(int state) {
+        TextView text = (TextView) findViewById(R.id.textView11);
+        switch (state) {
+            case 0: // Breathe In (5s)
 //                pb.setMax(90);
-//                text.setText("Breathe In");
-//                break;
-//            case 1: // Hold1 (6s)
+                text.setText("Breathe In");
+
+                break;
+            case 1: // Hold1 (6s)
 //                pb.setMax(100);
-//                text.setText("Hold Your Breath");
-//                break;
-//            case 2: // Breathe Out (7s)
+                text.setText("Hold Your Breath");
+
+                break;
+            case 2: // Breathe Out (7s)
 //                pb.setMax(110);
-//                text.setText("Breathe Out");
-//                break;
-//            case 3: // Hold2 (5s)
+                text.setText("Breathe Out");
+
+                break;
+            case 3: // Hold2 (5s)
 //                pb.setMax(80);
-//                text.setText("Hold Your Breath");
-//                state = -1;
-//                loops++;
-//                break;
-//        }
-//        return;
-//    }
+                text.setText("Hold Your Breath");
+                state = -1;
+                loops++;
+                break;
+        }
+
+    }
 }
 
 
