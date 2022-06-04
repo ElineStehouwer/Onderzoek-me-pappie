@@ -7,6 +7,7 @@
     <string name="meditation3">10-Minute Session</string>
     <string name="MeditationTip">Meditation Tips</string>
     <string name="explanation">Here are some tips that help with stress: </string>
+    <string name= "tips" >Focussing on your breathing can reduce your stress levels. Maybe our breathing exercise will help.</string>
 
     <string-array name="names">
         <item>Vivi Luijckx</item>

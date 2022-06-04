@@ -86,7 +86,9 @@
             android:label="1-Minute Session"/>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="Menu"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

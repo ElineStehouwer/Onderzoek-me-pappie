@@ -45,6 +45,7 @@
         android:id="@+id/button8"
         android:layout_width="230dp"
         android:layout_height="80dp"
+        android:onClick="openMeditationTips"
         android:text="@string/MeditationTip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button7"
