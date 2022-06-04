@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 public class BreathingExercise extends AppCompatActivity {
@@ -17,36 +19,66 @@ public class BreathingExercise extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breathing_exercise);
+        setTitle("Breathing");
+        startTimer();
+
     }
 
+    ProgressBar pb;
+    int counter = 0;
+    int state = 0;
+    int loops = 0;
+    Timer timer = new Timer();
 
-    public int startBreathingTimer(View v) throws InterruptedException {
-        int state = 0;
-        for (int i = 0; i < 600000000; i++) {
-            changeText(state);
-            Thread.sleep(6000);
-            state++;
-        }
-
+    public int startTimer() {
+        pb = (ProgressBar) findViewById(R.id.ProgressBar);
+        pb.setMax(100);
+        TextView text = (TextView) findViewById(R.id.textView11);
+        TimerTask timertask = new TimerTask() {
+            @Override
+            public void run() {
+                counter++;
+                pb.setProgress(counter);
+                if (counter == 100) {
+                    counter = 0;
+                    changeText(state);
+                    state++;
+                }
+            }
+        };
+        timer.schedule(timertask, 1000, 100);
         return 0;
     }
 
+
+
+
     public void changeText(int state) {
-        TextView text = findViewById(R.id.textView11);
+        TextView text = (TextView) findViewById(R.id.textView11);
         switch (state) {
-            case 0: // Breathe In
+            case 0: // Breathe In (5s)
+//                pb.setMax(90);
                 text.setText("Breathe In");
+
                 break;
-            case 1: // Hold1
+            case 1: // Hold1 (6s)
+//                pb.setMax(100);
                 text.setText("Hold Your Breath");
+
                 break;
-            case 2: // Breathe Out
+            case 2: // Breathe Out (7s)
+//                pb.setMax(110);
                 text.setText("Breathe Out");
+
                 break;
-            case 3: // Hold2
+            case 3: // Hold2 (5s)
+//                pb.setMax(80);
                 text.setText("Hold Your Breath");
+                state = -1;
+                loops++;
                 break;
         }
+
     }
 }
 

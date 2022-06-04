@@ -13,6 +13,7 @@ public class BreathingOptions extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breathing_options);
+        setTitle("Breathing");
     }
 
     public void openBreathingExercise (View v) {

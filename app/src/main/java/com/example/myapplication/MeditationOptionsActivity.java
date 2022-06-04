@@ -12,6 +12,7 @@ public class MeditationOptionsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meditation_options);
+        setTitle("Meditation");
     }
 
     public void openOneMinSess (View v) {

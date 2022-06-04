@@ -15,6 +15,7 @@ public class oneMinSess extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one_min_sess);
+        setTitle("Meditation");
     }
 
     public void onStart (View v) {
