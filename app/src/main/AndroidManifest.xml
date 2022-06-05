@@ -10,85 +10,95 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".JournalEditor"
+            android:exported="false" />
+        <activity
+            android:name=".Images"
+            android:exported="false" />
+        <activity
+            android:name=".Jokes"
+            android:exported="false" />
+        <activity
+            android:name=".ExamDistraction"
+            android:exported="false" />
+        <activity
+            android:name=".ExamTips"
+            android:exported="false" />
+        <activity
+            android:name=".ExamAnxietyHelp"
+            android:exported="false" />
+        <activity
+            android:name=".Journal"
+            android:exported="false" />
+        <activity
             android:name=".MeditationTips"
             android:exported="false"
-            android:parentActivityName=".MeditationOptionsActivity"
-            android:label="Meditation Tips"/>
+            android:label="Meditation Tips"
+            android:parentActivityName=".MeditationOptionsActivity" />
         <activity
             android:name=".TenMinSess"
             android:exported="false"
-            android:parentActivityName=".MeditationOptionsActivity"
             android:label="10-Minute Session"
-            />
+            android:parentActivityName=".MeditationOptionsActivity" />
         <activity
             android:name=".TwoMinSess"
             android:exported="false"
-            android:parentActivityName=".MeditationOptionsActivity"
             android:label="5-Minute Session"
-            />
+            android:parentActivityName=".MeditationOptionsActivity" />
         <activity
             android:name=".BreathingExplanation"
             android:exported="false"
-            android:parentActivityName=".BreathingOptions"
             android:label="Explanation and Tips"
-            />
+            android:parentActivityName=".BreathingOptions" />
         <activity
             android:name=".BreathingExercise"
             android:exported="false"
-            android:parentActivityName=".BreathingOptions"
             android:label="Breathing Exercise"
-            />
+            android:parentActivityName=".BreathingOptions" />
         <activity
             android:name=".BreathingOptions"
             android:exported="false"
-            android:parentActivityName=".SNDmenu"
             android:label="Breathing Options"
-            />
+            android:parentActivityName=".SNDmenu" />
         <activity
             android:name=".ContactingProfessionalsActivity"
             android:exported="false"
             android:label="Contacting Professionals"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SNDmenu"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
             android:label="Stress and Depression Handling"
-            />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Chatting"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
             android:label="Chatting"
-            />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".EmotionTracker"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
             android:label="Emotion Tracker"
-            />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".GoalTracker"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
             android:label="Goal Tracker"
-            />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MeditationOptionsActivity"
             android:exported="false"
-            android:parentActivityName=".SNDmenu"
             android:label="Meditation Options"
-            />
+            android:parentActivityName=".SNDmenu" />
         <activity
             android:name=".oneMinSess"
             android:exported="false"
-            android:parentActivityName=".MeditationOptionsActivity"
-            android:label="1-Minute Session"/>
+            android:label="1-Minute Session"
+            android:parentActivityName=".MeditationOptionsActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Menu"
-            >
+            android:label="Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -7,7 +7,27 @@
     <string name="meditation3">10-Minute Session</string>
     <string name="MeditationTip">Meditation Tips</string>
     <string name="explanation">Here are some tips that help with stress: </string>
-    <string name= "tips" >Focussing on your breathing can reduce your stress levels. Maybe our breathing exercise will help.</string>
+    <string name="tips">Focussing on your breathing can reduce your stress levels. Maybe our breathing exercise will help.</string>
+    <string name="anxietyHelp">To help with your exam anxiety we have the following options</string>
+    <string name="tip7">- Don´t be scared if it feels like you’re doing it wrong, there is nothing to do wrong</string>
+    <string name="tip2">- Start with a few deep breaths to calm the body</string>
+    <string name="tip3">- Slowly reintroduce movement after meditating</string>
+    <string name="tip4">- Always acknowledge your emotions</string>
+    <string name="tip5">- Make sure to breathe naturally during meditation</string>
+    <string name="tip6">- Before you start: create a meditative space for yourself and get comfortable there</string>
+    <string name="distractionExplanation">To see some funny jokes, tap on the Jokes button. To see relaxing/funny images tap on the Images button: </string>
+
+    <string-array name="jokes">
+        <item>What do you call a fake noodle?\n An impasta!</item>
+        <item>What do you call cheese that isn`t yours?\n Nacho Cheese. </item>
+        <item>What does a baby computer call it`s father?\n Data! </item>
+        <item>Why did the golfer change his pants?\n Because he got a hole in one!</item>
+        <item>How do you make holy water?\n You boil the hell out of it. </item>
+        <item>What do you get when you cross a snowman with a vampire?\n Frostbite.</item>
+        <item>What`s at the bottom of the ocean and shivers?\n A nervous wreck!</item>
+        <item>Why don`t they play poker in the jungle?\n Too many cheetahs.</item>
+        <item>When is your door not actually a door?\n When it`s actually ajar.</item>
+    </string-array>
 
     <string-array name="names">
         <item>Vivi Luijckx</item>

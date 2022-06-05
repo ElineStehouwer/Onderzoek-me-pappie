@@ -6,27 +6,26 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class SNDmenu extends AppCompatActivity {
+public class ExamAnxietyHelp extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sndmenu);
-        setTitle("Stress & Depression Handling");
+        setContentView(R.layout.activity_exam_anxiety_help);
     }
 
-    public void openMeditation (View v) {
+    public void openMeditation(View v) {
         Intent i = new Intent(this, MeditationOptionsActivity.class);
         startActivity(i);
     }
 
-    public void openBreathing (View v) {
-        Intent i = new Intent ( this, BreathingOptions.class);
+    public void openTips (View v) {
+        Intent i = new Intent(this, ExamTips.class);
         startActivity(i);
     }
 
-    public void openJournal (View v) {
-        Intent i = new Intent (this, Journal.class);
+    public void openDistraction (View v) {
+        Intent i = new Intent(this, ExamDistraction.class);
         startActivity(i);
     }
 }
