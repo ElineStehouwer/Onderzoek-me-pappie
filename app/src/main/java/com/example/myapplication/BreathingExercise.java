@@ -27,7 +27,7 @@ public class BreathingExercise extends AppCompatActivity {
         setContentView(R.layout.activity_breathing_exercise);
         setTitle("Breathing");
         counter = 0;
-        state =0;
+        state =1;
         loops =0;
         timer = new Timer();
         text = (TextView) findViewById(R.id.textView11);
@@ -46,8 +46,8 @@ public class BreathingExercise extends AppCompatActivity {
                 pb.setProgress(counter);
                 if (counter == 100) {
                     counter = 0;
-                    state++;
                     changeText(state);
+                    state++;
                 }
             }
         };
@@ -84,7 +84,7 @@ public class BreathingExercise extends AppCompatActivity {
 
                 break;
             case 2: // Breathe Out (7s)
-//                pb.setMax(110);
+//               pb.setMax(110);
                 runOnUiThread(new Runnable () {
                     @Override
                     public void run () {
@@ -96,11 +96,13 @@ public class BreathingExercise extends AppCompatActivity {
                 break;
             case 3: // Hold2 (5s)
 //                pb.setMax(80);
-                this.state = -1;
+                this.state = 0;
+                loops++;
                 runOnUiThread(new Runnable () {
                     @Override
                     public void run () {
                         text.setText("Hold Your Breath");
+
                     }
                 });
                 loops++;
