@@ -96,13 +96,13 @@ public class BreathingExercise extends AppCompatActivity {
                 break;
             case 3: // Hold2 (5s)
 //                pb.setMax(80);
+                this.state = -1;
                 runOnUiThread(new Runnable () {
                     @Override
                     public void run () {
                         text.setText("Hold Your Breath");
                     }
                 });
-                state = -1;
                 loops++;
                 break;
         }
