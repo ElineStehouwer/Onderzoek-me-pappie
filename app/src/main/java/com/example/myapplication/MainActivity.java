@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void openChatting (View v) {
+    public void openExamAnxietyHelp(View v) {
         Intent i = new Intent (this, ExamAnxietyHelp.class);
         startActivity(i);
     }

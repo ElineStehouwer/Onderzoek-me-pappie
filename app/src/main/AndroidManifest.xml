@@ -11,25 +11,46 @@
         android:theme="@style/Theme.MyApplication">
         <activity
             android:name=".JournalEditor"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Edit journal"
+            android:parentActivityName=".Journal"
+            />
         <activity
             android:name=".Images"
-            android:exported="false" />
+            android:exported="false"
+            android:label ="Images"
+            android:parentActivityName=".ExamDistraction"
+            />
         <activity
             android:name=".Jokes"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Jokes"
+            android:parentActivityName=".ExamDistraction"
+            />
         <activity
             android:name=".ExamDistraction"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Distraction"
+            android:parentActivityName=".ExamAnxietyHelp"
+            />
         <activity
             android:name=".ExamTips"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Exam Anxiety Tips"
+            android:parentActivityName=".ExamAnxietyHelp"
+            />
         <activity
             android:name=".ExamAnxietyHelp"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Exam Anxiety Help"
+            android:parentActivityName=".MainActivity"
+            />
         <activity
             android:name=".Journal"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Journal"
+            android:parentActivityName=".SNDmenu"
+            />
         <activity
             android:name=".MeditationTips"
             android:exported="false"
@@ -98,7 +119,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Menu">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -14,9 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
-    String[] data1, data2, data3, data4;
-    int[] images;
-    Context context;
+    private final String[] data1, data2, data3, data4;
+    private final int[] images;
+    private final Context context;
 
     public MyAdapter(Context context, String[] s1, String[] s2, String[] s3, String[] s4, int[] images) {
         this.context = context;

@@ -20,19 +20,22 @@
 
     <Button
         android:id="@+id/play5Min"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="248dp"
         android:onClick="onStart"
-        android:text="Button"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="218dp" />
+        android:text="Play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/pause5Min"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
         android:onClick="onPause"
-        android:text="Button"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="310dp" />
+        android:text="pause"
+        app:layout_constraintStart_toStartOf="@+id/play5Min"
+        app:layout_constraintTop_toBottomOf="@+id/play5Min" />
 </androidx.constraintlayout.widget.ConstraintLayout>

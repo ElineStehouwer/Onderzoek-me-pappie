@@ -13,7 +13,7 @@ import android.widget.EditText;
 import java.util.HashSet;
 
 public class JournalEditor extends AppCompatActivity {
-    int noteId;
+    private int noteId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

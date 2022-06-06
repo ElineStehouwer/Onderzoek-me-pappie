@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 public class Jokes extends AppCompatActivity {
 
-    String[] jokes;
-    TextView joke;
-    int index;
+    private String[] jokes;
+    private TextView joke;
+    private int index;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

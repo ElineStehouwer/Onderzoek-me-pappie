@@ -21,16 +21,12 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Journal extends AppCompatActivity {
-
-
-
     static ArrayList<String> notes = new ArrayList<>();
     static ArrayAdapter arrayAdapter;
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.add_note, menu);
         return super.onCreateOptionsMenu(menu);
@@ -56,7 +52,9 @@ public class Journal extends AppCompatActivity {
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.myapplication", Context.MODE_PRIVATE);
         HashSet<String> stringSet = (HashSet<String>) sharedPreferences.getStringSet("notes", null);
         if (stringSet == null) {
-            notes.add("Example note");
+            if (notes.isEmpty()) {
+                notes.add("Example note");
+            }
         } else {
             notes = new ArrayList<>(stringSet);
         }

@@ -8,7 +8,7 @@ import android.view.View;
 
 public class TwoMinSess extends AppCompatActivity {
 
-    MediaPlayer sound;
+    private MediaPlayer sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +31,11 @@ public class TwoMinSess extends AppCompatActivity {
 
     public void onStop () {
         super.onStop();
-        sound.release();
-        sound = null;
+        if (sound != null) {
+            sound.release();
+            sound = null;
+        }
+
     }
 
 }

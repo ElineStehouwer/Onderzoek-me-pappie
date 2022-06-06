@@ -14,23 +14,28 @@
         android:layout_marginEnd="279dp"
         android:background="#00302E2E"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/puppy" />
 
     <Button
         android:id="@+id/play10Min"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="243dp" />
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="224dp"
+        android:text="Play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/pause10Min"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="311dp" />
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:text="pause"
+        app:layout_constraintStart_toStartOf="@+id/play10Min"
+        app:layout_constraintTop_toBottomOf="@+id/play10Min" />
 </androidx.constraintlayout.widget.ConstraintLayout>

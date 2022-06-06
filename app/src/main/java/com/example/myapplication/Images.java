@@ -10,9 +10,9 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class Images extends AppCompatActivity {
-    int[] pictures = {R.drawable.pic8, R.drawable.pic2, R.drawable.pic5, R.drawable.pic4, R.drawable.pic6, R.drawable.pic7};
-    ImageView picture;
-    int index;
+    private int[] pictures = {R.drawable.pic8, R.drawable.pic2, R.drawable.pic5, R.drawable.pic4, R.drawable.pic6, R.drawable.pic7};
+    private ImageView picture;
+    private int index;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

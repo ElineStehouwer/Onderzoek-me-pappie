@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class oneMinSess extends AppCompatActivity {
 
-    MediaPlayer sound;
+    private MediaPlayer sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,10 @@ public class oneMinSess extends AppCompatActivity {
 
     public void onStop () {
         super.onStop();
-        sound.release();
-        sound = null;
+        if (sound != null) {
+            sound.release();
+            sound = null;
+        }
+
     }
 }
