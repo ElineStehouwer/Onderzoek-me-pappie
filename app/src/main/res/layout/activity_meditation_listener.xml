@@ -4,38 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TenMinSess">
+    tools:context=".MeditationListener">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageView2"
         android:layout_width="132dp"
         android:layout_height="131dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="279dp"
         android:background="#00302E2E"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/puppy" />
 
     <Button
-        android:id="@+id/play10Min"
+        android:id="@+id/button10"
         android:layout_width="230dp"
         android:layout_height="80dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="248dp"
+        android:onClick="onStart"
         android:text="Play"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/pause10Min"
+        android:id="@+id/pauze"
         android:layout_width="230dp"
         android:layout_height="80dp"
         android:layout_marginTop="20dp"
+        android:onClick="onPause"
         android:text="pause"
-        app:layout_constraintStart_toStartOf="@+id/play10Min"
-        app:layout_constraintTop_toBottomOf="@+id/play10Min" />
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

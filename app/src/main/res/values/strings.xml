@@ -16,6 +16,7 @@
     <string name="tip5">- Make sure to breathe naturally during meditation</string>
     <string name="tip6">- Before you start: create a meditative space for yourself and get comfortable there</string>
     <string name="distractionExplanation">To see some funny jokes, tap on the Jokes button. To see relaxing/funny images tap on the Images button: </string>
+    <string name="BreathingExplanation">- Relax your neck and shoulders while doing the breathing exercises. \n\n- Choose a comfortable seated position, for example laying down or sitting comfortable\n\n - Breathe in and out through your nose\n\n - Close your eyes and relax your face \n\n - Keep your breath slow and steady while breathing out\n\n - Wear comfortable clothes\n\n - Keep your spine straight and avoid straining the body</string>
 
     <string-array name="jokes">
         <item>What do you call a fake noodle?\n An impasta!</item>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class ExamAnxietyHelp extends AppCompatActivity {
 
@@ -14,18 +15,22 @@ public class ExamAnxietyHelp extends AppCompatActivity {
         setContentView(R.layout.activity_exam_anxiety_help);
     }
 
-    public void openMeditation(View v) {
-        Intent i = new Intent(this, MeditationOptionsActivity.class);
+    public void openEverything (View v) {
+        Class someClass = null;
+        Button button = (Button) v;
+        switch (button.getText().toString()) {
+            case "Meditation":
+                someClass = MeditationOptionsActivity.class;
+                break;
+            case "Tips":
+                someClass = ExamTips.class;
+                break;
+            case "Distraction":
+                someClass = ExamDistraction.class;
+                break;
+        }
+        Intent i = new Intent(this, someClass);
         startActivity(i);
     }
 
-    public void openTips (View v) {
-        Intent i = new Intent(this, ExamTips.class);
-        startActivity(i);
-    }
-
-    public void openDistraction (View v) {
-        Intent i = new Intent(this, ExamDistraction.class);
-        startActivity(i);
-    }
 }

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class MeditationOptionsActivity extends AppCompatActivity {
 
@@ -15,18 +16,20 @@ public class MeditationOptionsActivity extends AppCompatActivity {
         setTitle("Meditation");
     }
 
-    public void openOneMinSess (View v) {
-        Intent i = new Intent(this, oneMinSess.class);
-        startActivity(i);
-    }
-
-    public void openTwoMinSess (View v) {
-        Intent i = new Intent (this, TwoMinSess.class);
-        startActivity(i);
-    }
-
-    public void openTenMinSess (View v) {
-        Intent i = new Intent (this, TenMinSess.class);
+    public void openMeditation(View v) {
+        Button button = (Button) v;
+        Intent i = new Intent(this, MeditationListener.class);
+        switch(button.getText().toString()) {
+            case "1-Minute Session":
+                i.putExtra("ID", 1);
+                break;
+            case "5-Minute Session":
+                i.putExtra("ID", 2);
+                break;
+            case "10-Minute Session":
+                i.putExtra("ID", 3);
+                break;
+        }
         startActivity(i);
     }
 
