@@ -10,47 +10,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".EmotionTrackerEditor"
+            android:exported="false" />
+        <activity
             android:name=".JournalEditor"
             android:exported="false"
             android:label="Edit journal"
-            android:parentActivityName=".Journal"
-            />
+            android:parentActivityName=".Journal" />
         <activity
             android:name=".Images"
             android:exported="false"
-            android:label ="Images"
-            android:parentActivityName=".ExamDistraction"
-            />
+            android:label="Images"
+            android:parentActivityName=".ExamDistraction" />
         <activity
             android:name=".Jokes"
             android:exported="false"
             android:label="Jokes"
-            android:parentActivityName=".ExamDistraction"
-            />
+            android:parentActivityName=".ExamDistraction" />
         <activity
             android:name=".ExamDistraction"
             android:exported="false"
             android:label="Distraction"
-            android:parentActivityName=".ExamAnxietyHelp"
-            />
+            android:parentActivityName=".ExamAnxietyHelp" />
         <activity
             android:name=".ExamTips"
             android:exported="false"
             android:label="Exam Anxiety Tips"
-            android:parentActivityName=".ExamAnxietyHelp"
-            />
+            android:parentActivityName=".ExamAnxietyHelp" />
         <activity
             android:name=".ExamAnxietyHelp"
             android:exported="false"
             android:label="Exam Anxiety Help"
-            android:parentActivityName=".MainActivity"
-            />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Journal"
             android:exported="false"
             android:label="Journal"
-            android:parentActivityName=".SNDmenu"
-            />
+            android:parentActivityName=".SNDmenu" />
         <activity
             android:name=".MeditationTips"
             android:exported="false"
