@@ -85,7 +85,7 @@ public class Journal extends AppCompatActivity {
                                 notes.remove(itemToDelete);
                                 arrayAdapter.notifyDataSetChanged();
 
-                                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.myjournal", Context.MODE_PRIVATE);
+                                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.myapplication", Context.MODE_PRIVATE);
                                 HashSet<String> stringSet = new HashSet(Journal.notes);
                                 sharedPreferences.edit().putStringSet("notes", stringSet).apply();
                             }
