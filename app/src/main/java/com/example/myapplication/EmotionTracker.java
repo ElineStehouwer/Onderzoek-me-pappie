@@ -51,10 +51,7 @@ public class EmotionTracker extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emotion_tracker);
         setTitle("Emotion Tracker");
-        ListView listView = (ListView) findViewById(R.id.listView);
-
-
-
+        ListView listView = (ListView) findViewById(R.id.listView2);
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.myapplication", Context.MODE_PRIVATE);
         HashSet<String> stringSet = (HashSet<String>) sharedPreferences.getStringSet("entries", null);
         if (stringSet == null) {
@@ -65,18 +62,17 @@ public class EmotionTracker extends AppCompatActivity {
             entries = new ArrayList<>(stringSet);
         }
 
-
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, entries);
         listView.setAdapter(arrayAdapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(), EmotionTrackerEditor.class);
-                intent.putExtra("entryId", i);
-                startActivity(intent);
-            }
-        });
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Intent intent = new Intent(getApplicationContext(), EmotionTrackerEditor.class);
+//                intent.putExtra("entryId", i);
+//                startActivity(intent);
+//            }
+//        });
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {

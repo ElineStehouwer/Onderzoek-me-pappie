@@ -89,7 +89,7 @@
             android:name=".EmotionTrackerEditor"
             android:exported="false"
             android:label="Emotion Tracker Editor"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".EmotionTracker" />
         <activity
             android:name=".GoalTracker"
             android:exported="false"
