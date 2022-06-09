@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".EmotionTracker">
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView13"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
