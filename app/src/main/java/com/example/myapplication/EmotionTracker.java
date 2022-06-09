@@ -19,22 +19,26 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class EmotionTracker extends AppCompatActivity {
-    static ArrayList<String> notes = new ArrayList<>();
+    static ArrayList<String> entries = new ArrayList<>();
     static ArrayAdapter arrayAdapter;
+    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy");
+    String currentDate = sdf.format(new Date());
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu m) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.add_note, menu);
-        return super.onCreateOptionsMenu(menu);
+        menuInflater.inflate(R.menu.add_emotion, m);
+        return super.onCreateOptionsMenu(m);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         super.onOptionsItemSelected(item);
-        if (item.getItemId() == R.id.add_note) {
+        if (item.getItemId() == R.id.add_emotion) {
             Intent intent = new Intent(getApplicationContext(), EmotionTrackerEditor.class);
             startActivity(intent);
             return true;
@@ -49,25 +53,27 @@ public class EmotionTracker extends AppCompatActivity {
         setTitle("Emotion Tracker");
         ListView listView = (ListView) findViewById(R.id.listView);
 
+
+
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.myapplication", Context.MODE_PRIVATE);
-        HashSet<String> stringSet = (HashSet<String>) sharedPreferences.getStringSet("notes", null);
+        HashSet<String> stringSet = (HashSet<String>) sharedPreferences.getStringSet("entries", null);
         if (stringSet == null) {
-            if (notes.isEmpty()) {
-                notes.add("Example note");
+            if (entries.isEmpty()) {
+                entries.add(currentDate + ": " + "5 - Best Day Ever!: Today we finished our project for Research & Development and it feels awesome!!!");
             }
         } else {
-            notes = new ArrayList<>(stringSet);
+            entries = new ArrayList<>(stringSet);
         }
 
 
-        arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, notes);
+        arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, entries);
         listView.setAdapter(arrayAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), EmotionTrackerEditor.class);
-                intent.putExtra("noteId", i);
+                intent.putExtra("entryId", i);
                 startActivity(intent);
             }
         });
@@ -82,12 +88,12 @@ public class EmotionTracker extends AppCompatActivity {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                notes.remove(itemToDelete);
+                                entries.remove(itemToDelete);
                                 arrayAdapter.notifyDataSetChanged();
 
                                 SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.myapplication", Context.MODE_PRIVATE);
-                                HashSet<String> stringSet = new HashSet(EmotionTracker.notes);
-                                sharedPreferences.edit().putStringSet("notes", stringSet).apply();
+                                HashSet<String> stringSet = new HashSet(EmotionTracker.entries);
+                                sharedPreferences.edit().putStringSet("entries", stringSet).apply();
                             }
                         })
                         .setNegativeButton("No", null)
