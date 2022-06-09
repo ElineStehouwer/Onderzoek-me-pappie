@@ -17,7 +17,7 @@ import java.util.HashSet;
 
 public class EmotionTrackerEditor extends AppCompatActivity {
     private int entryId;
-    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy");
+    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy @ hh:mm a");
     String currentDate = sdf.format(new Date());
 
     @Override

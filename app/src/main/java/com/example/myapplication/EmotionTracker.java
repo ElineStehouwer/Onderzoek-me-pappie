@@ -25,7 +25,7 @@ import java.text.SimpleDateFormat;
 public class EmotionTracker extends AppCompatActivity {
     static ArrayList<String> entries = new ArrayList<>();
     static ArrayAdapter arrayAdapter;
-    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy");
+    SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy hh:mm");
     String currentDate = sdf.format(new Date());
 
     @Override

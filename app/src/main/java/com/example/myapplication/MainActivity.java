@@ -31,12 +31,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void openGoalTracker (View v) {
-        Intent i = new Intent (this, GoalTracker.class);
-        startActivity(i);
-    }
-
-
     public void openExamAnxietyHelp(View v) {
         Intent i = new Intent (this, ExamAnxietyHelp.class);
         startActivity(i);
