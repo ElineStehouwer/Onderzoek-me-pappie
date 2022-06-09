@@ -56,7 +56,7 @@ public class EmotionTracker extends AppCompatActivity {
         HashSet<String> stringSet = (HashSet<String>) sharedPreferences.getStringSet("entries", null);
         if (stringSet == null) {
             if (entries.isEmpty()) {
-                entries.add(currentDate + ": " + "5 - Best Day Ever!!");
+                entries.add("[exampleDate]: 5 - Best Day Ever!!");
             }
         } else {
             entries = new ArrayList<>(stringSet);
