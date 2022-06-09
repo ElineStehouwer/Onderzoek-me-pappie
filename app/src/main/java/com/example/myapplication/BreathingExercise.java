@@ -47,6 +47,9 @@ public class BreathingExercise extends AppCompatActivity {
                 if (counter == 100) {
                     counter = 0;
                     changeText(state);
+                    if (loops == 1) {
+                        changeText(0);
+                    }
                     state++;
                 }
             }
@@ -68,8 +71,6 @@ public class BreathingExercise extends AppCompatActivity {
                         text.setText("Breathe In");
                     }
                 });
-
-
                 break;
             case 1: // Hold1 (6s)
 //                pb.setMax(100);
@@ -80,8 +81,6 @@ public class BreathingExercise extends AppCompatActivity {
                         text.setText("Hold Your Breath");
                     }
                 });
-
-
                 break;
             case 2: // Breathe Out (7s)
 //               pb.setMax(110);
@@ -91,8 +90,6 @@ public class BreathingExercise extends AppCompatActivity {
                         text.setText("Breathe Out");
                     }
                 });
-
-
                 break;
             case 3: // Hold2 (5s)
 //                pb.setMax(80);
@@ -105,7 +102,6 @@ public class BreathingExercise extends AppCompatActivity {
 
                     }
                 });
-                loops++;
                 break;
         }
 

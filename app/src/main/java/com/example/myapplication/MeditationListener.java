@@ -9,8 +9,13 @@ import android.view.View;
 
 public class MeditationListener extends AppCompatActivity {
     private MediaPlayer sound;
-    private int soundId;
+    private int soundId;  //The id of the R.raw file that holds the
+                            // sound corresponding to the ID that was passed with the intent
 
+    /**
+     *   Gets the ID that was put with the intent and based on that id give
+     *   the soundId the right id value.
+     * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +34,11 @@ public class MeditationListener extends AppCompatActivity {
         }
     }
 
+    /**
+     *   If the start button is pressed, this method is called. Then the
+     *   MediaPlayer sound is created using the soundId, if it wasn't already,
+     *   and the audio stored in sound is started.
+     * */
     public void onStart (View v) {
         if (sound == null) {
             sound = MediaPlayer.create(this, soundId);
@@ -36,12 +46,23 @@ public class MeditationListener extends AppCompatActivity {
         sound.start();
     }
 
+
+    /**
+     *   If the pause button is pressed, this method is called. Then the
+     *   MediaPlayer sound is paused, if it wasn't already.
+     * */
     public void onPause (View v) {
         if (sound.isPlaying()) {
             sound.pause();
         }
     }
 
+
+    /**
+     *   If the activity is closed, this method is called. Then the
+     *   MediaPlayer sound will be released and set to null, if it wasn't
+     *   already.
+     * */
     public void onStop () {
         super.onStop();
         if (sound != null) {

@@ -81,11 +81,6 @@
             android:label="Stress and Depression Handling"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".Chatting"
-            android:exported="false"
-            android:label="Chatting"
-            android:parentActivityName=".MainActivity" />
-        <activity
             android:name=".EmotionTracker"
             android:exported="false"
             android:label="Emotion Tracker"

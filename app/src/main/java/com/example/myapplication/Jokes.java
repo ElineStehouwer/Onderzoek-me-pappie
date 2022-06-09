@@ -25,6 +25,12 @@ public class Jokes extends AppCompatActivity {
         joke.setText(jokes[0]);
     }
 
+    /**
+     *   This method is called when the Next button is clicked, it goes to
+     *   the joke, if there isn't any, then an AlertDialog will pop-up, if the
+     *   user presses the "Beginning" button, then the iteration begins anew. If
+     *   the user presses the "Go back" button, then the Distraction activity will be opened.
+     * */
     public void onNext (View v) {
         index++;
         if (index < jokes.length) {

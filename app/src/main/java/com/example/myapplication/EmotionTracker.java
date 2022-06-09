@@ -47,13 +47,13 @@ public class EmotionTracker extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emotion_tracker);
         setTitle("Emotion Tracker");
-        ListView listView = (ListView) findViewById(R.id.listView);
+        ListView listView = (ListView) findViewById(R.id.listView2);
 
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.myapplication", Context.MODE_PRIVATE);
         HashSet<String> stringSet = (HashSet<String>) sharedPreferences.getStringSet("notes", null);
         if (stringSet == null) {
             if (notes.isEmpty()) {
-                notes.add("Example note");
+                notes.add("Example emotion");
             }
         } else {
             notes = new ArrayList<>(stringSet);

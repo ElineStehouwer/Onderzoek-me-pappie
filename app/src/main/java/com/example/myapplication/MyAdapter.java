@@ -14,16 +14,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
-    private final String[] data1, data2, data3, data4;
+    private final String[] names, locations, numbers, links;
     private final int[] images;
     private final Context context;
 
     public MyAdapter(Context context, String[] s1, String[] s2, String[] s3, String[] s4, int[] images) {
         this.context = context;
-        data1 = s1;
-        data2 = s2;
-        data3 = s3;
-        data4 = s4;
+        names = s1;
+        locations = s2;
+        numbers = s3;
+        links = s4;
         this.images = images;
     }
 
@@ -35,15 +35,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         return new MyViewHolder(view);
     }
 
+    /**
+     *   In this method we set the contents of our view to the right content
+     *   corresponding to the contents at the position position in our String
+     *   and integer arrays.
+     *   We also give the TextView of the links an onClick listener which will
+     *   open the website corresponding to the link stored at links[position].
+     * */
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.text1.setText(data1[position]);
-        holder.text2.setText(data2[position]);
-        holder.text3.setText(data3[position]);
-        holder.text4.setText(data4[position]);
+        holder.text1.setText(names[position]);
+        holder.text2.setText(locations[position]);
+        holder.text3.setText(numbers[position]);
+        holder.text4.setText(links[position]);
         holder.text4.setOnClickListener(new View.OnClickListener() {@Override
             public void onClick (View v) {
-            String website = data4[holder.getAdapterPosition()];
+            String website = links[holder.getAdapterPosition()];
             Intent browserIntent = new Intent (Intent.ACTION_VIEW, Uri.parse(website));
             context.startActivity(browserIntent);
         }
@@ -56,7 +63,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         return images.length;
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+    /**
+     *   Here we make our personal ViewHolder class to match our xml layout file
+     *   my_row.xml.
+     * */
+
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView text1, text2, text3, text4;
         ImageView myImage;
 

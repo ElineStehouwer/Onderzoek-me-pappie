@@ -21,10 +21,13 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Journal extends AppCompatActivity {
-    static ArrayList<String> notes = new ArrayList<>();
+    static ArrayList<String> notes = new ArrayList<>(); //Stores the journal entries added to the journal
     static ArrayAdapter arrayAdapter;
 
 
+    /**
+     *   Adds the OptionsMenu add_note.xml to the activity.
+     * */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -32,6 +35,12 @@ public class Journal extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+
+    /**
+     *   Specifies what has to happen when our option in the option menu is
+     *   selected. We make sure that when the add_note menu option is selected,
+     *   the JournalEditor class is opened.
+     * */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         super.onOptionsItemSelected(item);
@@ -43,14 +52,23 @@ public class Journal extends AppCompatActivity {
         return false;
     }
 
+    /**
+     * In this onCreate method the following things happen: the locally saved
+     * journal additions get restored in the listview, using SharedPreferences.
+     * Also an on click and on long click listener is set to the items in the list
+     * view.
+     * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_journal);
         ListView listView = (ListView) findViewById(R.id.listView);
 
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.myapplication", Context.MODE_PRIVATE);
+        //Restore the journal additions saved locally on the phone
+        SharedPreferences sharedPreferences = getApplicationContext().
+                getSharedPreferences("com.example.myapplication", Context.MODE_PRIVATE);
         HashSet<String> stringSet = (HashSet<String>) sharedPreferences.getStringSet("notes", null);
+        //When there are no locally saved journal additions, then we will add an example note.
         if (stringSet == null) {
             if (notes.isEmpty()) {
                 notes.add("Example note");
@@ -58,11 +76,12 @@ public class Journal extends AppCompatActivity {
         } else {
             notes = new ArrayList<>(stringSet);
         }
-
-
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, notes);
         listView.setAdapter(arrayAdapter);
 
+        // Set an onItemClickListener to the ListView, this will make it so that if the user
+        // clicks on a journal entry, they will go to the JournalEditor and they will be
+        // able to edit the entry.
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -71,6 +90,12 @@ public class Journal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Set an onItemLongClickListener to the ListView, this will make it so that if the
+        // user long clicks on a journal entry, they will get a pop-up asking them if they
+        // want to delete the entry they long clicked on. Here they can choose yes or no
+        // in case of yes the entry gets deleted (also from the local storage), in case of no
+        // it doesn't.
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -85,7 +110,9 @@ public class Journal extends AppCompatActivity {
                                 notes.remove(itemToDelete);
                                 arrayAdapter.notifyDataSetChanged();
 
-                                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("com.example.myapplication", Context.MODE_PRIVATE);
+                                SharedPreferences sharedPreferences = getApplicationContext().
+                                        getSharedPreferences
+                                                ("com.example.myapplication", Context.MODE_PRIVATE);
                                 HashSet<String> stringSet = new HashSet(Journal.notes);
                                 sharedPreferences.edit().putStringSet("notes", stringSet).apply();
                             }

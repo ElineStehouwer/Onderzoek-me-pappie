@@ -16,6 +16,10 @@ public class MeditationOptionsActivity extends AppCompatActivity {
         setTitle("Meditation");
     }
 
+    /**
+     *   Opens MeditationListener activity and adds the right ID
+     *   corresponding to the text on the button that was clicked on.
+     * */
     public void openMeditation(View v) {
         Button button = (Button) v;
         Intent i = new Intent(this, MeditationListener.class);

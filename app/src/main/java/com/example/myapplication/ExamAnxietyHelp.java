@@ -15,6 +15,12 @@ public class ExamAnxietyHelp extends AppCompatActivity {
         setContentView(R.layout.activity_exam_anxiety_help);
     }
 
+
+    /**
+     *   Opens one of three activities (MeditationOptionsActivity, ExamTips
+     *   and ExamDistraction) depending on the text on the button that
+     *   was clicked on.
+     * */
     public void openEverything (View v) {
         Class someClass = null;
         Button button = (Button) v;
