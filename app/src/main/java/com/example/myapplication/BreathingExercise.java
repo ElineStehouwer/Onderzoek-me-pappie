@@ -46,11 +46,9 @@ public class BreathingExercise extends AppCompatActivity {
                 pb.setProgress(counter);
                 if (counter == 100) {
                     counter = 0;
-                    changeText(state);
-                    if (loops == 1) {
-                        changeText(0);
-                    }
                     state++;
+                    changeText(state);
+
                 }
             }
         };
@@ -93,7 +91,7 @@ public class BreathingExercise extends AppCompatActivity {
                 break;
             case 3: // Hold2 (5s)
 //                pb.setMax(80);
-                this.state = 0;
+                this.state = -1;
                 loops++;
                 runOnUiThread(new Runnable () {
                     @Override
